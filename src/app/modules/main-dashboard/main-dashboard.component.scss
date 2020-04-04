@@ -1,5 +1,14 @@
-:host {
-    background-image: url("../../shared/img/background.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fix;
+.bg-img {
+  background-image: url('../../shared/img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
 }
+
