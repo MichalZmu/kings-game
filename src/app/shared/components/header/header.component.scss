@@ -1,0 +1,31 @@
+.bg-img-header {
+  background: rgb(121, 65, 9);
+  background: linear-gradient(90deg, rgba(121, 65, 9, 1) 35%, rgba(193, 125, 7, 1) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  padding: 0;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-box-shadow: 0 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.header-title {
+
+  font-size: 30px;
+  font-family: Roboto;
+  color: white;
+  font-weight: bold;
+  line-height: 1.2;
+  z-index: 4;
+
+}

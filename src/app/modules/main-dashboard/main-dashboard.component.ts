@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainDashboardComponent implements OnInit {
 
+  gameStarted = false;
+
   constructor() { }
 
   ngOnInit(): void {
-    document.body.classList.add('bg-img');
   }
 
 
