@@ -1,5 +1,4 @@
 export const CardOptions = [
-  // todo: create a new object with cards
   { id: 1, name: '2', type: 'hearts' },
   { id: 2, name: '3', type: 'hearts' },
   { id: 3, name: '4', type: 'hearts'},
@@ -13,5 +12,5 @@ export const CardOptions = [
   { id: 11, name: 'Jack', type: 'hearts'},
   { id: 12, name: 'Queen', type: 'hearts'},
   { id: 13, name: 'King', type: 'hearts'},
-  { id: 13, name: 'Ace', type: 'hearts'}
+  { id: 14, name: 'Ace', type: 'hearts'}
 ];

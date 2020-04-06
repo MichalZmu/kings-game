@@ -9,6 +9,8 @@ import {CardOptions} from './card-options';
 export class CardPickerComponent implements OnInit {
   cardOptions = CardOptions;
   card: string;
+  tempCardList = this.cardOptions;
+
 
   constructor() {
   }
@@ -17,12 +19,12 @@ export class CardPickerComponent implements OnInit {
   }
 
   chooseRandomCard(): void {
-    // todo: deal when there is no more cards
-    let tempCardList = this.cardOptions;
-    const index = Math.floor(Math.random() * this.cardOptions.length);
-    this.card = tempCardList[index].name + ' ' + tempCardList[index].type;
-    console.log(this.card);
-    tempCardList.splice(index, 1);
-    console.log('tempCardList: ', tempCardList);
+    if (this.tempCardList.length === 0) {
+      this.card = 'no more cards';
+    } else {
+      const index = Math.floor(Math.random() * this.cardOptions.length);
+      this.card = this.tempCardList[index].name + ' ' + this.tempCardList[index].type;
+      this.tempCardList.splice(index, 1);
+    }
   }
 }
