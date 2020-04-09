@@ -10,6 +10,7 @@ export class CardPickerComponent implements OnInit {
   cardOptions = CardOptions;
   card: string;
   tempCardList = this.cardOptions;
+  imageIndex: string;
 
 
   constructor() {
@@ -23,7 +24,8 @@ export class CardPickerComponent implements OnInit {
       this.card = 'no more cards';
     } else {
       const index = Math.floor(Math.random() * this.cardOptions.length);
-      this.card = this.tempCardList[index].name + ' ' + this.tempCardList[index].type;
+      this.card = this.tempCardList[index].name + ' - ' + this.tempCardList[index].type;
+      this.imageIndex = '../../../../assets/img/cards/' + this.card + '.png';
       this.tempCardList.splice(index, 1);
     }
   }
