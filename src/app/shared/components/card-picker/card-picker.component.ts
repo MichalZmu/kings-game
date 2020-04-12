@@ -33,7 +33,7 @@ export class CardPickerComponent implements OnInit {
   }
 
   getRule(card): void {
-    const ruleIndex = card.split(' - ', 1);
+    const ruleIndex = card.split('-', 1);
     this.rule = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).rule;
   }
 }
