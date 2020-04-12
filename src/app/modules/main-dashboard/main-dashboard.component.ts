@@ -8,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class MainDashboardComponent implements OnInit {
 
   gameStarted = false;
+  cardType: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  cardTypeCatcher(ev): void {
+    this.cardType = ev.split(' - ', 1);
+  }
 
 }

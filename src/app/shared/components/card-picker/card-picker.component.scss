@@ -1,6 +1,46 @@
-.card-chooser-container {
-  margin-top: 100px;
-  height: 200px;
+@import url("../shared.css");
+
+.card-picker-container {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
+
+.card {
+  height: 480px;
+  width: 320px;
+  margin: 15px 0;
+}
+
+.card-border {
+  width: 481px;
+  height: 321px;
+  border: 1px solid black;
+}
+
+.rule-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.next-button {
+
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-radius: 30px;
+  background: linear-gradient(90deg, rgba(121, 65, 9, 1) 35%, rgba(193, 125, 7, 1) 100%);
+  box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.56);
+  cursor: pointer;
+  font-weight: bold;
+
+  width: 230px;
+  height: 50px;
+  z-index: 6;
+  color: white;
+
+}
+
+

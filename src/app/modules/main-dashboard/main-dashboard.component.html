@@ -1,8 +1,10 @@
 <div class="bg-img">
   <div class="main-container">
-    <div *ngIf="!gameStarted" class="main-button-container">
-      <button (click)="gameStarted = true" class="start-button">{{'start game' | uppercase}}</button>
+    <div class="column">
+      <app-card-picker (cardType)="cardTypeCatcher($event)" *ngIf="gameStarted"></app-card-picker>
+      <div *ngIf="!gameStarted" class="main-button-container">
+        <button (click)="gameStarted = true" class="start-button">{{'start game' | uppercase}}</button>
+      </div>
     </div>
-    <app-card-picker *ngIf="gameStarted"></app-card-picker>
   </div>
 </div>

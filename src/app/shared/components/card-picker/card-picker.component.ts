@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CardOptions} from './card-options';
 
 @Component({
@@ -9,24 +9,31 @@ import {CardOptions} from './card-options';
 export class CardPickerComponent implements OnInit {
   cardOptions = CardOptions;
   card: string;
+  rule: string;
   tempCardList = this.cardOptions;
   imageIndex: string;
-
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.chooseRandomCard();
   }
 
   chooseRandomCard(): void {
-    if (this.tempCardList.length === 0) {
+    if (this.tempCardList.cardTypes.length === 0) {
       this.card = 'no more cards';
     } else {
-      const index = Math.floor(Math.random() * this.cardOptions.length);
-      this.card = this.tempCardList[index].name + ' - ' + this.tempCardList[index].type;
+      const index = Math.floor(Math.random() * this.cardOptions.cardTypes.length);
+      this.card = this.tempCardList.cardTypes[index].name + ' - ' + this.tempCardList.cardTypes[index].type;
       this.imageIndex = '../../../../assets/img/cards/' + this.card + '.png';
-      this.tempCardList.splice(index, 1);
+      this.tempCardList.cardTypes.splice(index, 1);
+      this.getRule(this.card);
     }
+  }
+
+  getRule(card): void {
+    const ruleIndex = card.split(' - ', 1);
+    this.rule = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).rule;
   }
 }

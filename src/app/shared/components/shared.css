@@ -1,0 +1,14 @@
+.start-button {
+  border-width: 1px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-radius: 30px;
+  background: linear-gradient(90deg, rgba(121, 65, 9, 1) 35%, rgba(193, 125, 7, 1) 100%);
+  box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.56);
+  cursor: pointer;
+
+  width: 276px;
+  height: 65px;
+  z-index: 6;
+  color: white;
+}

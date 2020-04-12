@@ -13,7 +13,7 @@
 }
 
 .main-button-container {
-  margin: 200px;
+  margin: 150px;
 
   button {
     cursor: pointer;
@@ -22,7 +22,8 @@
 
 .main-container {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   color: white;
 }
 
