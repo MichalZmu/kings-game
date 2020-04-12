@@ -26,7 +26,7 @@ export class CardPickerComponent implements OnInit {
     } else {
       const index = Math.floor(Math.random() * this.cardOptions.cardTypes.length);
       this.card = this.tempCardList.cardTypes[index].name + '-' + this.tempCardList.cardTypes[index].type;
-      this.imageIndex = '../../../../assets/img/cards/' + this.card + '.png';
+      this.imageIndex = '/assets/img/cards/' + this.card + '.png';
       this.tempCardList.cardTypes.splice(index, 1);
       this.getRule(this.card);
     }
