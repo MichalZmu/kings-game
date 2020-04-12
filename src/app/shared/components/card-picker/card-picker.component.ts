@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CardOptions} from './card-options';
 
 @Component({
@@ -25,7 +25,7 @@ export class CardPickerComponent implements OnInit {
       this.card = 'no more cards';
     } else {
       const index = Math.floor(Math.random() * this.cardOptions.cardTypes.length);
-      this.card = this.tempCardList.cardTypes[index].name + ' - ' + this.tempCardList.cardTypes[index].type;
+      this.card = this.tempCardList.cardTypes[index].name + '-' + this.tempCardList.cardTypes[index].type;
       this.imageIndex = '../../../../assets/img/cards/' + this.card + '.png';
       this.tempCardList.cardTypes.splice(index, 1);
       this.getRule(this.card);
