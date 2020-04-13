@@ -12,6 +12,7 @@ export class CardPickerComponent implements OnInit {
   rule: string;
   tempCardList = this.cardOptions;
   imageIndex: string;
+  cardsLeft: number;
 
   constructor() {
   }
@@ -29,11 +30,16 @@ export class CardPickerComponent implements OnInit {
       this.imageIndex = 'assets/img/cards/' + this.card + '.png';
       this.tempCardList.cardTypes.splice(index, 1);
       this.getRule(this.card);
+      this.cardsLeftCounter();
     }
   }
 
   getRule(card): void {
     const ruleIndex = card.split('-', 1);
     this.rule = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).rule;
+  }
+
+  cardsLeftCounter(): void {
+    this.cardsLeft = this.tempCardList.cardTypes.length;
   }
 }
