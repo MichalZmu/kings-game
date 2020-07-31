@@ -7,7 +7,7 @@
     <div class="card">
       <img class="scale-in-center" *ngIf="card" src="{{imageIndex}}" alt="card image" (click)="chooseRandomCard()">
     </div>
-    <p>Cards left: {{cardsLeft }}/56</p>
+    <p>Cards left: {{cardsLeft }}/{{cardOptions.cardTypes.length}}</p>
     <button (click)="chooseRandomCard()" class="next-button">Next Card</button>
   </div>
 </div>
