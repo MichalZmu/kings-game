@@ -62,9 +62,9 @@ export const CardOptions = {
     {number: '6', rule: 'All the guys drink!'},
     {number: '7', rule: 'Seven is heaven!'},
     {number: '8', rule: 'Eight is mate!'},
-    {number: '9', rule: 'Nine is rime'},
-    {number: '10', rule: 'Ten is category'},
-    {number: 'jack', rule: 'Choose a rule'},
+    {number: '9', rule: 'Nine is rime!'},
+    {number: '10', rule: 'Ten is category!'},
+    {number: 'jack', rule: 'Choose a rule!'},
     {number: 'queen', rule: 'Question master!'},
     {number: 'king', rule: 'Crown on the head!'},
     {number: 'ace', rule: 'Everyone has to drink!'}
