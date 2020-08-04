@@ -1,15 +1,22 @@
 .start-button {
   border-width: 1px;
-  border-color: rgb(0, 0, 0);
-  border-style: dashed;
+  border-color: white;
+  border-style: solid;
   border-radius: 30px;
-  background-color: rgb(0, 0, 0);
+  background-color: transparent;
   box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.56);
+  font-weight: bold;
 
   width: 276px;
   height: 65px;
   z-index: 6;
   color: white;
+  transition: 0.5s;
+}
+
+.start-button:hover {
+  background-color: white;
+  color: black;
 }
 
 .main-button-container {
@@ -25,7 +32,6 @@
   flex-direction: row;
   justify-content: space-around;
   color: white;
-  min-height: 700px;
 }
 
 

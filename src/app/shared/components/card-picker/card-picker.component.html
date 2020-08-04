@@ -1,13 +1,12 @@
-<div class="main-container">
-  <div class="card-picker-container">
-    <h2 *ngIf="card">Your card is: {{card}}</h2>
-    <div class="rule-description">
-      <span><strong>Your task is: </strong>{{rule}}</span>
-    </div>
-    <div class="card">
-      <img class="scale-in-center" *ngIf="card" src="{{imageIndex}}" alt="card image" (click)="chooseRandomCard()">
-    </div>
-    <p>Cards left: {{cardsLeft }}/{{cardOptions.cardTypes.length}}</p>
-    <button (click)="chooseRandomCard()" class="next-button">Next Card</button>
+<div class="card-picker-container">
+  <div class="rule-description">
+    <h1>Your task is:</h1>
+    <span class="rule">{{rule}}</span>
   </div>
+  <div class="card">
+    <img class="scale-in-center" *ngIf="card" src="{{imageIndex}}" alt="card image" (click)="chooseRandomCard()">
+  </div>
+  <p>Cards left: {{cardsLeft }}/{{cardOptions.cardTypes.length}}</p>
+  <button (click)="chooseRandomCard()" class="next-button">Next Card</button>
 </div>
+
