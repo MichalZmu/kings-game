@@ -1,16 +1,5 @@
 @import url("../shared.css");
 
-@keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1
-  }
-}
-
 .card-picker-container {
   margin-top: 25px;
   display: flex;
@@ -21,10 +10,40 @@
 
 .card {
   margin: 15px 0;
+  height: 410px;
 
   img {
     height: 400px;
     width: auto;
+    cursor: pointer;
+  }
+
+  .help-card {
+    height: 400px;
+    width: 267px;
+    background-color: white;
+    border-radius: 12px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+    .description {
+      width: 90%;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .exit-icon {
+      position: absolute;
+      width: 2em;
+      height: auto;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+    }
   }
 }
 
@@ -57,10 +76,16 @@
   cursor: pointer;
   font-weight: bold;
 
-  width: 230px;
+  width: 150px;
   height: 50px;
   z-index: 6;
   color: white;
+}
+
+.button-container {
+  button {
+    margin: 0 5px;
+  }
 }
 
 .scale-in-center{animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both}

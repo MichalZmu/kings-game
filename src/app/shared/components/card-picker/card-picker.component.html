@@ -4,9 +4,16 @@
     <span class="rule">{{rule}}</span>
   </div>
   <div class="card">
-    <img class="scale-in-center" *ngIf="card" src="{{imageIndex}}" alt="card image" (click)="chooseRandomCard()">
+    <img *ngIf="card && !showHelp" src="{{imageIndex}}" alt="card image" (click)="chooseRandomCard()">
+    <div class="help-card" *ngIf="showHelp">
+      <img class="exit-icon" (click)="showHelp = !showHelp" src="assets/times-solid.svg" alt="exit-icon">
+      <div class="description">{{description}}</div>
+    </div>
   </div>
   <p>Cards left: {{cardsLeft }}/{{cardOptions.cardTypes.length}}</p>
-  <button (click)="chooseRandomCard()" class="next-button">Next Card</button>
+  <div class="button-container">
+    <button (click)="showHelp = !showHelp" class="next-button">Help</button>
+    <button (click)="chooseRandomCard()" class="next-button">Next Card</button>
+  </div>
 </div>
 

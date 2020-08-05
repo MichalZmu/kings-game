@@ -10,9 +10,11 @@ export class CardPickerComponent implements OnInit {
   cardOptions = CardOptions;
   card: string;
   rule: string;
+  description: string;
   tempCardList = JSON.parse(JSON.stringify(this.cardOptions));
   imageIndex: string;
   cardsLeft: number;
+  showHelp = false;
 
   constructor() {
   }
@@ -22,8 +24,9 @@ export class CardPickerComponent implements OnInit {
   }
 
   chooseRandomCard(): void {
+    this.showHelp = false;
     if (this.tempCardList.cardTypes.length === 0) {
-      this.card = 'no more cards';
+      this.rule = 'No more cards!';
     } else {
       const index = Math.floor(Math.random() * this.tempCardList.cardTypes.length);
       this.card = this.tempCardList.cardTypes[index].name + '-' + this.tempCardList.cardTypes[index].type;
@@ -37,6 +40,7 @@ export class CardPickerComponent implements OnInit {
   getRule(card): void {
     const ruleIndex = card.split('-', 1);
     this.rule = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).rule;
+    this.description = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).description;
   }
 
   cardsLeftCounter(): void {

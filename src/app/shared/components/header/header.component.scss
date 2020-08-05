@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: Roboto;
   src: url('src/assets/fonts/Roboto-Regular.ttf') format("opentype");
@@ -12,7 +13,7 @@
 
 .header-title {
 
-  font-size: 60px;
+  font-size: 50px;
   font-family: Roboto;
   color: white;
   font-weight: bold;
@@ -22,3 +23,10 @@
   border-bottom: 1px solid white;
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 70px;
+  }
+}
+
