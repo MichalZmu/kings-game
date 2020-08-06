@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { CardPickerComponent } from './components/card-picker/card-picker.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -11,7 +12,8 @@ import { CardPickerComponent } from './components/card-picker/card-picker.compon
     CardPickerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   exports: [
     HeaderComponent,

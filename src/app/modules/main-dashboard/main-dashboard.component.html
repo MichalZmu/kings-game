@@ -1,7 +1,14 @@
 <div class="main-container">
   <app-card-picker (cardType)="cardTypeCatcher($event)" *ngIf="gameStarted"></app-card-picker>
+  <div class="language-picker" *ngIf="!gameStarted">
+    <h1>{{'choose_language' | translate}}:</h1>
+    <div class="language-container">
+      <span class="single-language" (click)="selectLanguage('pl')" [class.active]="selectedLanguage === 'pl'">PL</span>
+      <span class="single-language" (click)="selectLanguage('en')" [class.active]="selectedLanguage === 'en'">ENG</span>
+    </div>
+  </div>
   <div *ngIf="!gameStarted" class="main-button-container">
-    <button (click)="gameStarted = true" class="start-button">{{'start game' | uppercase}}</button>
+    <button (click)="gameStarted = true" class="start-button">{{'start_game' | translate | uppercase}}</button>
   </div>
 </div>
 

@@ -4,6 +4,7 @@ import { DefaultComponent } from './default.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { MainDashboardComponent } from 'src/app/modules/main-dashboard/main-dashboard.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -13,7 +14,8 @@ import { MainDashboardComponent } from 'src/app/modules/main-dashboard/main-dash
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ]
 })
 export class DefaultModule { }

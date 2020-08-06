@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CardOptions} from './card-options';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-card-picker',
@@ -16,11 +17,13 @@ export class CardPickerComponent implements OnInit {
   cardsLeft: number;
   showHelp = false;
   newGame = false;
+  currentLang: string;
 
-  constructor() {
+  constructor(private _translateService: TranslateService) {
   }
 
   ngOnInit(): void {
+    this.currentLang = this._translateService.currentLang;
     this.chooseRandomCard();
   }
 
@@ -42,7 +45,7 @@ export class CardPickerComponent implements OnInit {
   getRule(card): void {
     const ruleIndex = card.split('-', 1);
     this.rule = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).rule;
-    this.description = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).description;
+    this.description = this.cardOptions.cardRules.find(el => el.number === ruleIndex[0]).description[this.currentLang];
   }
 
   cardsLeftCounter(): void {

@@ -1,6 +1,6 @@
 <div class="card-picker-container">
   <div class="rule-description">
-    <h1>Your task is:</h1>
+    <h1>{{'your_task' | translate}}</h1>
     <span class="rule">{{rule}}</span>
   </div>
   <div class="card">
@@ -10,11 +10,11 @@
       <div class="description">{{description}}</div>
     </div>
   </div>
-  <p>Cards left: {{cardsLeft }}/{{cardOptions.cardTypes.length}}</p>
+  <p>{{'cards_left' | translate}} {{cardsLeft }}/{{cardOptions.cardTypes.length}}</p>
   <div class="button-container">
-    <button *ngIf="!newGame" (click)="showHelp = !showHelp" class="next-button">Help</button>
-    <button *ngIf="!newGame" (click)="chooseRandomCard()" class="next-button">Next Card</button>
-    <button *ngIf="newGame" (click)="startNewGame()" class="next-button">New Game</button>
+    <button *ngIf="!newGame" (click)="showHelp = !showHelp" class="next-button">{{'help' | translate | titlecase}}</button>
+    <button *ngIf="!newGame" (click)="chooseRandomCard()" class="next-button">{{'next_card' | translate | titlecase}}</button>
+    <button *ngIf="newGame" (click)="startNewGame()" class="next-button">{{'new_game' | translate | titlecase}}</button>
   </div>
 </div>
 
