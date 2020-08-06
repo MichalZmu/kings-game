@@ -15,6 +15,7 @@ export class CardPickerComponent implements OnInit {
   imageIndex: string;
   cardsLeft: number;
   showHelp = false;
+  newGame = false;
 
   constructor() {
   }
@@ -27,6 +28,7 @@ export class CardPickerComponent implements OnInit {
     this.showHelp = false;
     if (this.tempCardList.cardTypes.length === 0) {
       this.rule = 'No more cards!';
+      this.newGame = true;
     } else {
       const index = Math.floor(Math.random() * this.tempCardList.cardTypes.length);
       this.card = this.tempCardList.cardTypes[index].name + '-' + this.tempCardList.cardTypes[index].type;
@@ -45,5 +47,11 @@ export class CardPickerComponent implements OnInit {
 
   cardsLeftCounter(): void {
     this.cardsLeft = this.tempCardList.cardTypes.length;
+  }
+
+  startNewGame(): void {
+    this.tempCardList = JSON.parse(JSON.stringify(this.cardOptions));
+    this.chooseRandomCard();
+    this.newGame = false;
   }
 }

@@ -12,8 +12,9 @@
   </div>
   <p>Cards left: {{cardsLeft }}/{{cardOptions.cardTypes.length}}</p>
   <div class="button-container">
-    <button (click)="showHelp = !showHelp" class="next-button">Help</button>
-    <button (click)="chooseRandomCard()" class="next-button">Next Card</button>
+    <button *ngIf="!newGame" (click)="showHelp = !showHelp" class="next-button">Help</button>
+    <button *ngIf="!newGame" (click)="chooseRandomCard()" class="next-button">Next Card</button>
+    <button *ngIf="newGame" (click)="startNewGame()" class="next-button">New Game</button>
   </div>
 </div>
 

@@ -62,7 +62,7 @@ export const CardOptions = {
     {number: '6', rule: 'Six is dicks!', description: 'All the boys are drinking!'},
     {number: '7', rule: 'Seven is heaven!', description: 'Hands up, the last person have to drink!'},
     {number: '8', rule: 'Eight is mate!', description: 'Choose your mate, he or she will have to drink when you do!'},
-    {number: '9', rule: 'Nine is rime!', description: 'Say the word, other people will have to rhyme to it.'},
+    {number: '9', rule: 'Nine is rhyme!', description: 'Say the word, other people will have to rhyme to it.'},
     {number: '10', rule: 'Ten is category!', description: 'Come up with the category, e.g. car brands. Each person in sequence have to say one, otherwise have to drink!'},
     {number: 'jack', rule: 'Choose a rule!', description: 'Come up with the rule. All the players must respect that until the end of the game, e.g. when you are drinking one hand must be up.'},
     {number: 'queen', rule: 'Question master!', description: 'You can questioning other players, if somebody answer your question, he or she has to drink.'},
