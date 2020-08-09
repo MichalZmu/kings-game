@@ -20,7 +20,8 @@
 }
 
 .main-button-container {
-  margin-top: 150px;
+  position: absolute;
+  top: 375px;
   margin-bottom: 20px;
 
   button {
@@ -34,6 +35,7 @@
   align-items: center;
   color: white;
   margin-top: 20px;
+  min-height: 350px;
 
   .simple-text {
     width: 90%;
