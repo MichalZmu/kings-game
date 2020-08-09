@@ -20,8 +20,8 @@
 }
 
 .main-button-container {
-  position: absolute;
-  top: 420px;
+  margin-top: 150px;
+  margin-bottom: 20px;
 
   button {
     cursor: pointer;
@@ -34,7 +34,11 @@
   align-items: center;
   color: white;
   margin-top: 20px;
-  height: 400px;
+
+  .simple-text {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 .language-container {

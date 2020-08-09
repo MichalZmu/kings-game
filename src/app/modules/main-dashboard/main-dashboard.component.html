@@ -7,7 +7,7 @@
       <span class="single-language" (click)="selectLanguage('en')" [class.active]="selectedLanguage === 'en'">ENG</span>
     </div>
   </div>
-  <p *ngIf="selectedLanguage === 'pl' && !gameStarted">Dla zachowania klimatu gry, teksty zadań nie są tłumaczone.</p>
+  <p class="simple-text" *ngIf="selectedLanguage === 'pl' && !gameStarted">Dla zachowania klimatu gry, teksty zadań nie są tłumaczone.</p>
   <div *ngIf="!gameStarted" class="main-button-container">
     <button (click)="gameStarted = true" class="start-button">{{'start_game' | translate | uppercase}}</button>
   </div>
